@@ -151,13 +151,7 @@
       border-bottom: none;
     }
     
-    .card img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
+ 
     
     .card-details {
       flex: 1;
@@ -200,16 +194,39 @@
     margin-left: 0 !important; /* Ta bort eventuella vänstermarginaler */
   }
 }
+@media (max-width: 600px) {
+  .card {
+    /* Behåll horisontell layout, men justera vertikal inriktning */
+    display: flex;          /* borde redan finnas */
+    flex-direction: row;    /* om du ändrat till column tidigare, se till att ta bort det */
+    align-items: flex-start;/* flytta bilden uppåt intill rank/text */
+  }
+  /* Om du tidigare i mobil-@media satt .card { flex-direction: column; } 
+     ta bort eller åsidosätt det här så att bilden ligger kvar på rad med rank/text. */
+}
+
+
+
+.card-details .top-row .name {
+  flex: 1 1 auto;  /* tar så mycket utrymme som finns */
+  min-width: 0;    /* tillåter namnet att krympa och brytas om det blir mycket långt */
+}
+.card-details .top-row .age {
+  flex: 0 0 auto;  /* håll åldern i sin naturliga storlek */
+  margin-left: 10px;
+}
+
+
 
     }
-
+/*Bilder och text*/
 /*Gör bilderna mindre*/
     /* Befintlig regel för bilder i kort: */
 .card img {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-right: 20px;
   flex-shrink: 0; /* undvik att bilden krymper för mycket vid flex-layout */
 }
@@ -425,7 +442,6 @@
   
   <nav>
     <div class="nav-header">
-      <div class="small-heading">Uppdateras dagligen!</div>
       <h2>Sveriges Rikaste Personer</h2>
       <p>Vem är rikast i Sverige 2025? Vi uppdaterar listan på sveriges rikaste personer VARJE DAG! Nästan alla har majoriteten av sitt kapital i aktier. Upptäck Sveriges rikaste man och kvinna – en komplett genomgång av deras förmögenhet och de företag som skapat deras imponerande förmögenhetsvärden. Läs vem som toppar listan och vilka aktörer som ligger bakom deras framgångar på börsen.</p>
       <ul>
@@ -434,6 +450,7 @@
         <li>Vi rankar Sveriges rikaste personer 2025!</li>
       </ul>
       <p>Vad är en miljard? En miljard är faktiskt 1000 miljoner, så 1 miljard kronor är 1000 miljoner kronor.</p>
+      <div class="small-heading">Uppdateras dagligen!</div>
     </div>
 
 
