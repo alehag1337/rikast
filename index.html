@@ -186,7 +186,43 @@
       gap: 20px;
       font-size: 0.95rem;
       color: #555;
+      
     }
+    @media (max-width: 600px) {
+  .card-details .bottom-row {
+    flex-direction: column;
+    align-items: flex-start; /* Se till att innehåll vänsterjusteras */
+    gap: 5px; /* Mindre avstånd mellan rader */
+  }
+    .bottom-row{
+      /* Lägg efter befintlig .bottom-row-definition */
+  .card-details .bottom-row span {
+    margin-left: 0 !important; /* Ta bort eventuella vänstermarginaler */
+  }
+}
+
+    }
+
+/*Gör bilderna mindre*/
+    /* Befintlig regel för bilder i kort: */
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0; /* undvik att bilden krymper för mycket vid flex-layout */
+}
+/*Gör så att texten lägger sig under*/
+/* Responsiv: på skärmar mindre än t.ex. 600px */
+@media (max-width: 600px) {
+  .card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+
     
     .card-details .bottom-row span {
       white-space: nowrap;
