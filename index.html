@@ -1,0 +1,470 @@
+<!DOCTYPE html> 
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Grundläggande reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'lato', sans-serif;
+      line-height: 1.6;
+      background: radial-gradient(circle at top center, rgba(23, 33, 49, 0.973) 0%, #030712 20%);
+      color: #131313;
+      padding: 20px;
+    }
+    
+    .notification-banner {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .logo {
+      width: 50px;
+      height: auto;
+    }
+    
+    header h1 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #fff;
+    }
+    
+    /* Info-knapp stilmall */
+    #info-btn {
+      font-size: 1rem;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #007BFF;
+      color: #fff;
+    }
+    
+    /* Container för de nya header-knapparna (endast text nu) */
+    #header-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .header-button {
+      font-size: 1rem;
+      padding: 5px 10px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    /* Info-kort (oförändrat, togglas via Info-knappen) */
+    #info-card {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      max-width: 90%;
+    }
+    
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    
+    
+    nav label {
+      font-weight: bold;
+      margin-right: 10px;
+      color: #fff;
+    }
+    
+    select {
+      padding: 8px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      margin-right: 20px;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    #list-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    #list-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .card {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .card:last-child {
+      border-bottom: none;
+    }
+    
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .card-details {
+      flex: 1;
+    }
+    
+    .card-details .top-row {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+    
+    .card-details .rank {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-right: 10px;
+      color: #007BFF;
+    }
+    
+    .card-details .name {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    
+    .card-details .bottom-row {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .card-details .bottom-row span {
+      white-space: nowrap;
+    }
+    
+    /* Första kortets rank visas i guld */
+    #list-section div.card:first-of-type .rank {
+      color: rgb(161, 137, 0);
+    }
+
+    .auth-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      width: 300px;
+    }
+
+    .auth-modal.active {
+      display: block;
+    }
+
+    .auth-modal h3 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .auth-modal input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .auth-modal button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .auth-modal .close-btn {
+      background-color: #ccc;
+    }
+
+    
+
+    .auth-modal .forgot-password {
+      background: none;
+      color: #007BFF;
+      font-size: 0.9rem;
+    }
+
+    .auth-modal .social-btn {
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+
+    .auth-modal .google-btn {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    .auth-modal .facebook-btn {
+      background-color: #3b5998;
+      color: #fff;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      border: 2px solid #fff;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: translateY(-50%) rotate(0deg); }
+      100% { transform: translateY(-50%) rotate(360deg); }
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    /* Stil för nya knappar i nav */
+    nav button {
+      position: relative;
+      background-color: #FFFFFF;
+      border: none;
+      font-size: 18px;
+      color: #007BFF;
+      padding: 15px;
+      width: 170px;
+      text-align: center;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .logo {
+  width: 150px; /* gör loggan bredare */
+  height: auto;  /* behåll proportionerna */
+}
+
+    /* Stil för rubrik och text i nav */
+    .nav-header {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-header .small-heading {
+      color: #D4AF37;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .nav-header h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .nav-header p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .nav-header ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .nav-header ul li {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 30px;
+      text-align: left;
+    }
+
+    .nav-header ul li::before {
+      content: '✔';
+      color: #00C4B4;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="notification-banner" id="notification-banner">
+    🚀 Sidan uppdateras varje dag
+  </div>
+  
+  <header>
+    <div class="logo-container">
+      <img src="logovit.png" alt="Logotyp" class="logo">
+      <button id="info-btn">FAQS</button>
+      </div>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="nav-header">
+      <div class="small-heading">Uppdateras dagligen!</div>
+      <h2>Sveriges Rikaste Personer</h2>
+      <p>Vem är rikast i Sverige 2025? Vi uppdaterar listan på sveriges rikaste personer VARJE DAG! Nästan alla har majoriteten av sitt kapital i aktier. Upptäck Sveriges rikaste man och kvinna – en komplett genomgång av deras förmögenhet och de företag som skapat deras imponerande förmögenhetsvärden. Läs vem som toppar listan och vilka aktörer som ligger bakom deras framgångar på börsen.</p>
+      <ul>
+        <li>Live-Listan över de rikaste svenskarna!</li>
+        <li>Yngsta miljardärerna i Sverige!</li>
+        <li>Vi rankar Sveriges rikaste personer 2025!</li>
+      </ul>
+      <p>Vad är en miljard? En miljard är faktiskt 1000 miljoner, så 1 miljard kronor är 1000 miljoner kronor.</p>
+    </div>
+
+
+    <button id="currency-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+      </svg>
+      Byt till SEK
+    </button>
+    <button id="age-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+      Under 50 år
+    </button>
+  </nav>
+  
+  <main>
+    <section id="list-section">
+      <h2>De rikaste personera</h2>
+      <!-- Kort renderas här -->
+    </section>
+  </main>
+  
+  <!-- Info-kortet som togglas via Info-knappen -->
+  <div id="info-card">
+    <h3>Hur ofta uppdateras sidan?</h3>
+    <p>Sidan uppdateras varje dag från gårdagens aktierkurser</p>
+    <h3>Hur räknar vi?</h3>
+    <p>Många av tillgångarna är placerade i börsnoterade aktier, och varje dag beräknar vi deras aktuella värde. Utöver vår egen löpande värdering har vi även inspirerats av Forbes rankning över världens rikaste personer. Dollar/SEK kursen uppdateras månadsvis</p>
+  </div>
+
+
+  
+  <!-- Existerande script -->
+  <script src="script.js"></script>
+  <script>
+    // Enkel toggling av info-kortet via Info-knappen
+    document.addEventListener("DOMContentLoaded", function() {
+      const infoBtn = document.getElementById("info-btn");
+      const infoCard = document.getElementById("info-card");
+      const currencyBtn = document.getElementById("currency-btn");
+      const ageBtn = document.getElementById("age-btn");
+
+      infoBtn.addEventListener("click", function() {
+        if (infoCard.style.display === "none" || infoCard.style.display === "") {
+          infoCard.style.display = "block";
+        } else {
+          infoCard.style.display = "none";
+        }
+      });
+
+      currencyBtn.addEventListener("click", function() {
+        currencyBtn.innerHTML = currencyBtn.innerHTML.includes("Byt till SEK") ?
+          `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>Byt till dollar` :
+          `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>Byt till SEK`;
+      });
+
+      ageBtn.addEventListener("click", function() {
+        ageBtn.innerHTML = ageBtn.innerHTML.includes("Under 50 år") ?
+          `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Alla åldrar` :
+          `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Under 50 år`;
+      });
+    });
+  </script>
+
+  
+</body>
+</html>
