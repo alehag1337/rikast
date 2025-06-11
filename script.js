@@ -205,7 +205,7 @@ function renderCards(people, currency, filterUnder50) {
     `;
   });
 
-  const title = filterUnder50 ? "Topplista under 50 år:" : "Topplista:";
+  const title = filterUnder50 ? "Topplista under 50 år" : "Topplista:";
   listSection.innerHTML = `<h2><span class="pulse-dot"></span> ${title}</h2>` + cardsHtml;
 }
 
