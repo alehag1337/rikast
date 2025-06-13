@@ -1,70 +1,72 @@
 // app.js
 
 // -----------------------------
-// 1) Manuell prislista per aktie (öppnings- och stängningspris)
+// 1) Manuell prislista per aktie för årets öppningskurs och aktuellt pris
 // -----------------------------
-const TICKER_OVERRIDE = {
-  "BALDB":       { open: 68.30, close: 66.02 },
-  "Bonesupport": { open: 268.0, close: 266.6 },
-  "Norion Bank": { open: 47.5, close: 47.75},
-  "KFast":       { open: 13.0, close: 12.98 },
-  "Sagax":       { open: 215.6, close: 210.8 },
-  "Sagax D":     { open: 33.8, close: 33.6 },
-  "Sagax A":     { open: 215.6, close: 210.8 },
-  "Lifco B":     { open: 397.2, close: 397.6 },
-  "LUND-B":      { open: 491.8, close: 487.2 }, 
-  "HMB":         { open: 138.9, close: 136.3 },
-  "Hexagon B":   { open: 98.48, close: 98.28 },
-  "Volvo":       { open: 269.6, close: 265.4 },
-  "EQT":         { open: 287.9, close: 288.7 },//avstlutade här
-  "Atlas Copco": { open: 150.0, close: 158.1 },
-  "Sandvik":     { open: 210.0, close: 215.20 },
-  "Securitas":   { open: 135.0, close: 140.9 },
-  "Bure Equity": { open: 280.0, close: 287.8 },
-  "Essity":      { open: 265.0, close: 272.7 },
-  "Skanska":     { open: 230.0, close: 233.5 },
-  "Apotea":      { open: 95.0, close: 97.42 },
-  "Epiroc":      { open: 210.0, close: 216.7 },
-  "AXFO":        { open: 270.0, close: 277.1 },
-  "Dustin Group":{ open: 1.90, close: 2.01 },
-  "Getinge B":   { open: 185.0, close: 190.75 },
-  "Arjo B":      { open: 32.0, close: 33.0 },
-  "Elanders B":  { open: 60.0, close: 61.5 },
-  "INDU-C":      { open: 345.0, close: 352.5 },
-  "Holmen B":    { open: 385.0, close: 393.6 },
-  "Handelsbanken A": { open: 125.0, close: 127.85 },
-  "Alleima":     { open: 80.0, close: 82.3 },
-  "Hufvudstaden":{ open: 120.0, close: 123.8 },
-  "Spotify":     { open: 6300.00, close: 6618.41 }, //Översätt till SEK
-  "Latour B":    { open: 255.0, close: 261.0 },
-  "AAK":         { open: 260.0, close: 268.8 },
-  "NIBE":        { open: 38.0, close: 40.32 },
-  "Hexpol":      { open: 88.0, close: 90.2 },
-  "Assa Abloy":  { open: 300.0, close: 310.5 },
-  "Hoist Finance":{ open: 92.0, close: 94.0 },
-  "Swedish logistic property": { open: 37.0, close: 38.3 },
-  "TFBank":      { open: 370.0, close: 376.0 },
-  // … fortsätt med alla tickers och deras prisvärden …
+const TICKER_OVERRIDE_YEAR = {
+  "BALDB":       { yearOpen: 76.96, current: 64.82 },
+  "Bonesupport": { yearOpen: 398.6, current: 266.6 },
+  "Norion Bank": { yearOpen: 38.0,  current: 48.55 },
+  "KFast":       { yearOpen: 16.94,  current: 12.98 },
+  "Sagax":       { yearOpen: 228.0, current: 210.8 },
+  "Sagax D":     { yearOpen: 31.4,  current: 33.6 },
+  "Sagax A":     { yearOpen: 228.0, current: 210.8 },
+  "Lifco B":     { yearOpen: 326.6, current: 395.4 },
+  "LUND-B":      { yearOpen: 507.0, current: 487.2 },
+  "HMB":         { yearOpen: 148.75, current: 136.3 },
+  "Hexagon B":   { yearOpen: 106.15, current: 98.28 },
+  "Volvo":       { yearOpen: 269.8, current: 265.4 },
+  "EQT":         { yearOpen: 309.2, current: 288.7 },
+  "Atlas Copco": { yearOpen: 171.65, current: 158.1 },
+  "Sandvik":     { yearOpen: 201.2, current: 215.20 },
+  "Securitas":   { yearOpen: 107.65, current: 140.9 },
+  "Bure Equity": { yearOpen: 392.4, current: 287.8 },
+  "Essity":      { yearOpen: 297.0, current: 272.7 },
+  "Skanska":     { yearOpen: 237.1, current: 233.5 },
+  "Apotea":      { yearOpen: 86.55,  current: 97.42 },
+  "Epiroc":      { yearOpen: 195.5, current: 216.7 },
+  "AXFO":        { yearOpen: 236.0, current: 277.1 },
+  "Dustin Group":{ yearOpen: 2.53,  current: 2.01 },
+  "Getinge B":   { yearOpen: 183.65, current: 190.75 },
+  "Arjo B":      { yearOpen: 36.3,  current: 33.0 },
+  "Elanders B":  { yearOpen: 88.0,  current: 61.5 },
+  "INDU-C":      { yearOpen: 354.2, current: 352.5 },
+  "Holmen B":    { yearOpen: 409.8, current: 393.6 },
+  "Handelsbanken A": { yearOpen: 116.1, current: 127.85 },
+  "Alleima":     { yearOpen: 76.0,  current: 82.3 },
+  "Hufvudstaden":{ yearOpen: 122.3, current: 123.8 },
+  "Spotify":     { yearOpen: 4321.00, current: 6634.62 },
+  "Latour B":    { yearOpen: 280.3, current: 261.0 },
+  "AAK":         { yearOpen: 320.2, current: 268.8 },
+  "NIBE":        { yearOpen: 43.69,  current: 40.32 },
+  "Hexpol":      { yearOpen: 103.1,  current: 90.2 },
+  "Assa Abloy":  { yearOpen: 327.8, current: 310.5 },
+  "Hoist Finance":{yearOpen: 93.5,  current: 94.0 },
+  "Swedish logistic property": { yearOpen: 39.5, current: 38.3 },
+  "TFBank":      { yearOpen: 390.0, current: 376.0 },
+  // … fortsätt med alla tickers och deras årsupplagningsvärden …
 };
 
 // -----------------------------
-// 2) Hämta priser utan API
+// 2) Hämta årspriser utan API
 // -----------------------------
-async function fetchStockPrices(tickers) {
+async function fetchStockPricesYearly(tickers) {
   const stockData = {};
 
   tickers.forEach(t => {
-    const o = TICKER_OVERRIDE[t] || { open: 0, close: 0 };
-    const price = o.close;
-    const dp = o.open ? ((o.close - o.open) / o.open * 100) : 0;
-    stockData[t] = { c: price, dp };
+    const o = TICKER_OVERRIDE_YEAR[t] || {};
+    const start = o.yearOpen || 0;
+    const now   = o.current   || 0;
+    const dpYear = start
+      ? ((now - start) / start * 100)
+      : 0;
+    stockData[t] = { price: now, startPrice: start, dpYear };
   });
 
   return stockData;
 }
 
 // --- Resten av koden förblir oförändrad ---
-
 // Funktion för att räkna ut ålder baserat på födelsedatum (format: "YYYY-MM-DD")
 function calculateAge(birthdate) {
   const today = new Date();
@@ -130,25 +132,34 @@ async function initializeData() {
       )
     ];
 
-    const stockData = await fetchStockPrices(tickers);
+    const stockData = await fetchStockPricesYearly(tickers);
 
     cachedPeopleWithWealth = people.map(person => {
-      const holdingsValue = (person.holdings || []).reduce((sum, h) => {
-        const price = stockData[h.ticker]?.c || 0;
-        return sum + (h.shares || 0) * price;
-      }, 0);
+      // Räkna värde vid årets början och aktuellt värde
+      let initialValue = 0;
+      let currentValue = 0;
 
-      const privateValue = parseFloat(person.privholdings) || 0;
-      person.wealth = holdingsValue + privateValue;
+      (person.holdings || []).forEach(h => {
+        const shares = h.shares || 0;
+        const data = stockData[h.ticker] || {};
+        initialValue += shares * (data.startPrice || 0);
+        currentValue += shares * (data.price || 0);
+      });
 
-      if (person.holdings && person.holdings.length > 0) {
-        person.percentChange = person.holdings.reduce((sum, h) => {
-          return sum + (stockData[h.ticker]?.dp || 0);
-        }, 0) / person.holdings.length;
-      } else {
-        person.percentChange = 0;
+      // Privatdel: lägg till privholdingsyopen som start och privholdings som nu
+      const privateStart   = parseFloat(person.privholdingsyopen) || 0;
+      const privateCurrent = parseFloat(person.privholdings)     || 0;
+      initialValue += privateStart;
+      currentValue += privateCurrent;
+
+      // Procentuell förändring i år baserat på total förmögenhet
+      let percentChangeYear = 0;
+      if (initialValue > 0) {
+        percentChangeYear = (currentValue - initialValue) / initialValue * 100;
       }
 
+      person.wealth = currentValue;
+      person.percentChangeYear = percentChangeYear;
       person.age = calculateAge(person.birthdate);
       return person;
     });
@@ -181,8 +192,8 @@ function renderCards(people, currency, filterUnder50) {
 
   people.forEach((person, index) => {
     const imageUrl = person.image || "https://via.placeholder.com/80";
-    const change = person.percentChange || 0;
-    const formattedChange = `${change < 0 ? '' : '+'}${change.toFixed(2)}% idag`;
+    const change = person.percentChangeYear || 0;
+    const formattedChange = `${change < 0 ? '' : '+'}${change.toFixed(2)}% i år`;
     const changeColor = change < 0 ? 'red' : 'green';
     const wealthDisplay = formatWealthValue(person.wealth, currency);
 
@@ -193,11 +204,11 @@ function renderCards(people, currency, filterUnder50) {
           <div class="top-row">
             <span class="rank">${index + 1}.</span>
             <span class="name">${person.name}</span>
-            <span class="age" style="margin-left: 10px;">(${person.age} år)</span>
+            <span class="age">(${person.age} år)</span>
           </div>
           <div class="bottom-row">
-            <span class="company" style="margin-left: 10px;">${person.company}</span>
-            <span class="change" style="color: ${changeColor}; margin-left: 10px;">${formattedChange}</span>
+            <span class="company">${person.company}</span>
+            <span class="change" style="color: ${changeColor};">${formattedChange}</span>
             <span class="wealth">Förmögenhet: ${wealthDisplay}</span>
           </div>
         </div>
