@@ -4,45 +4,45 @@
 // 1) Manuell prislista per aktie för årets öppningskurs och aktuellt pris
 // -----------------------------
 const TICKER_OVERRIDE_YEAR = {
-  "BALDB":       { yearOpen: 76.96, current: 63.46 },
-  "Bonesupport": { yearOpen: 398.6, current: 253.2 },
-  "Norion Bank": { yearOpen: 38.0,  current: 47.80 },
-  "KFast":       { yearOpen: 16.94,  current: 13.06 },
-  "Sagax":       { yearOpen: 228.0, current: 202.0 },
-  "Sagax D":     { yearOpen: 31.4,  current: 33.05 },
-  "Sagax A":     { yearOpen: 228.0, current: 203.0 },
-  "Lifco B":     { yearOpen: 326.6, current: 390.2 },
-  "LUND-B":      { yearOpen: 507.0, current: 466.6 },
-  "HMB":         { yearOpen: 148.75, current: 131.1 },
-  "Hexagon B":   { yearOpen: 106.15, current: 92.24 },
-  "Volvo":       { yearOpen: 269.8, current: 264.6 },
-  "EQT":         { yearOpen: 309.2, current: 275.2 },
-  "Atlas Copco": { yearOpen: 171.65, current: 152.95 },
-  "Sandvik":     { yearOpen: 201.2, current: 210.50 },
-  "Securitas":   { yearOpen: 107.65, current: 137.5 },
-  "Bure Equity": { yearOpen: 392.4, current: 287.8 },
-  "Essity":      { yearOpen: 297.0, current: 269.4 },
-  "Skanska":     { yearOpen: 237.1, current: 228.8 },
-  "Apotea":      { yearOpen: 86.55,  current: 87.61 },
-  "Epiroc":      { yearOpen: 195.5, current: 211.8 },
-  "AXFO":        { yearOpen: 236.0, current: 275.8 },
-  "Dustin Group":{ yearOpen: 2.53,  current: 2.2 },
+  "BALDB":       { yearOpen: 76.96, current: 66.02 },
+  "Bonesupport": { yearOpen: 398.6, current: 266.0 },
+  "Norion Bank": { yearOpen: 38.0,  current: 47.75 },
+  "KFast":       { yearOpen: 16.94,  current: 13.08 },
+  "Sagax":       { yearOpen: 228.0, current: 206.8 },
+  "Sagax D":     { yearOpen: 31.4,  current: 33.75 },
+  "Sagax A":     { yearOpen: 228.0, current: 208.0 },
+  "Lifco B":     { yearOpen: 326.6, current: 383.6 },
+  "LUND-B":      { yearOpen: 507.0, current: 468.2 },
+  "HMB":         { yearOpen: 148.75, current: 131.35 },
+  "Hexagon B":   { yearOpen: 106.15, current: 92.14 },
+  "Volvo":       { yearOpen: 269.8, current: 261.6 },
+  "EQT":         { yearOpen: 309.2, current: 277.0},
+  "Atlas Copco": { yearOpen: 171.65, current: 152.25 },
+  "Sandvik":     { yearOpen: 201.2, current: 213.10 },
+  "Securitas":   { yearOpen: 107.65, current: 137.95 },
+  "Bure Equity": { yearOpen: 392.4, current: 272.4 },
+  "Essity":      { yearOpen: 297.0, current: 260.0 },
+  "Skanska":     { yearOpen: 237.1, current: 227.6},
+  "Apotea":      { yearOpen: 86.55,  current: 85.88 },
+  "Epiroc":      { yearOpen: 195.5, current: 212.5 },
+  "AXFO":        { yearOpen: 236.0, current: 275.9 },
+  "Dustin Group":{ yearOpen: 2.53,  current: 2.11 },
   "Getinge B":   { yearOpen: 183.65, current: 184.7 },
-  "Arjo B":      { yearOpen: 36.3,  current: 32.46 },
-  "Elanders B":  { yearOpen: 88.0,  current: 61.1 },
-  "INDU-C":      { yearOpen: 354.2, current: 339.6 },
-  "Holmen B":    { yearOpen: 409.8, current: 377.4 },
+  "Arjo B":      { yearOpen: 36.3,  current: 31.94 },
+  "Elanders B":  { yearOpen: 88.0,  current: 58.2 },
+  "INDU-C":      { yearOpen: 354.2, current: 340.1 },
+  "Holmen B":    { yearOpen: 409.8, current: 376.6 },
   "Handelsbanken A": { yearOpen: 116.1, current: 125.75 },
-  "Alleima":     { yearOpen: 76.0,  current: 81.5 },
+  "Alleima":     { yearOpen: 76.0,  current: 81.2 },
   "Hufvudstaden":{ yearOpen: 122.3, current: 119.3 },
-  "Spotify":     { yearOpen: 4321.00, current: 6736.5 },
+  "Spotify":     { yearOpen: 4342.91, current: 6826.70 },
   "Latour B":    { yearOpen: 280.3, current: 244.2 },
-  "AAK":         { yearOpen: 320.2, current: 263.2},
-  "NIBE":        { yearOpen: 43.69,  current: 40.39 },
-  "Hexpol":      { yearOpen: 103.1,  current: 86.4 },
-  "Assa Abloy":  { yearOpen: 327.8, current: 302.4 },
-  "Hoist Finance":{yearOpen: 93.5,  current: 89.8 },
-  "Swedish logistic property": { yearOpen: 39.5, current: 39.75 },
+  "AAK":         { yearOpen: 320.2, current: 261.0},
+  "NIBE":        { yearOpen: 43.69,  current: 39.99 },
+  "Hexpol":      { yearOpen: 103.1,  current: 87.75 },
+  "Assa Abloy":  { yearOpen: 327.8, current: 300.3 },
+  "Hoist Finance":{yearOpen: 93.5,  current: 94.15 },
+  "Swedish logistic property": { yearOpen: 39.5, current: 39.95 },
   "TFBank":      { yearOpen: 390.0, current: 367.5 },
   // … fortsätt med alla tickers och deras årsupplagningsvärden …
 };
@@ -188,14 +188,54 @@ async function loadDataAndRender(currency = "USD", filterUnder50 = false) {
 
 function renderCards(people, currency, filterUnder50) {
   const listSection = document.getElementById('list-section');
-  let cardsHtml = '';
-
+  // Rensa tidigare innehåll (förutom ev rubrik, om du t.ex. har en <h2> som ska behållas kan du rensa barn med klass .card)
+  // Här antar vi att vi vill behålla eventuell rubrik i listSection, men enklast är att rensa allt och återskapa rubrik:
+  let cardsHtml = `
+    <h2><span class="pulse-dot"></span>De rikaste personerna</h2>
+  `;
   people.forEach((person, index) => {
     const imageUrl = person.image || "https://via.placeholder.com/80";
     const change = person.percentChangeYear || 0;
     const formattedChange = `${change < 0 ? '' : '+'}${change.toFixed(2)}% i år`;
     const changeColor = change < 0 ? 'red' : 'green';
+    // Formatera förmögenhet beroende på currency, antar du har formatWealthValue-funktion:
     const wealthDisplay = formatWealthValue(person.wealth, currency);
+    // För mer-info: om person.moreInfo saknas, visa tom eller default-text:
+     // --- Ändrad del: hantera moreInfo som array ---
+   // ... inuti renderCards före cardsHtml += ...
+    const infoArr = Array.isArray(person.moreInfo)
+      ? person.moreInfo
+      : [ person.moreInfo || "Ingen ytterligare information tillgänglig." ];
+    const [firstLine, ...otherLines] = infoArr;
+    // Bygg första rad
+    let moreInfoHtml = '';
+    if (firstLine) {
+      const parts0 = firstLine.split(':');
+      if (parts0.length > 1) {
+        const label0 = parts0.shift().trim();
+        const rest0 = parts0.join(':').trim();
+        moreInfoHtml += `<p><strong>${label0}:</strong> ${rest0}</p>`;
+      } else {
+        moreInfoHtml += `<p>${firstLine.trim()}</p>`;
+      }
+    }
+    // Bygg punktlista för resten
+    const lis = otherLines
+      .filter(line => line && line.trim())
+      .map(line => {
+        const parts = line.split(':');
+        if (parts.length > 1) {
+          const label = parts.shift().trim();
+          const rest = parts.join(':').trim();
+          return `<li><strong>${label}:</strong> ${rest}</li>`;
+        } else {
+          return `<li>${line.trim()}</li>`;
+        }
+      });
+    if (lis.length) {
+      moreInfoHtml += `<ul>${lis.join('')}</ul>`;
+    }
+    // --- Slut på ändring ---
 
     cardsHtml += `
       <div class="card">
@@ -211,14 +251,45 @@ function renderCards(people, currency, filterUnder50) {
             <span class="change" style="color: ${changeColor};">${formattedChange}</span>
             <span class="wealth">Förmögenhet: ${wealthDisplay}</span>
           </div>
+          <!-- Toggle-knapp -->
+          <button class="toggle-details-btn" aria-expanded="false">Visa mer</button>
+          <!-- Detaljsektion, gömd initialt pga CSS -->
+          <div class="details">
+            <p>${moreInfoHtml}</p>
+          </div>
         </div>
       </div>
     `;
   });
 
-  const title = filterUnder50 ? "Topplista under 50 år" : "Topplista:";
-  listSection.innerHTML = `<h2><span class="pulse-dot"></span> ${title}</h2>` + cardsHtml;
+  listSection.innerHTML = cardsHtml;
+
+  // Efter att HTML är injicerad, fäster vi event listeners på knapparna:
+  const toggleButtons = listSection.querySelectorAll('.toggle-details-btn');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const cardDetails = btn.closest('.card-details');
+      if (!cardDetails) return;
+      const detailsEl = cardDetails.querySelector('.details');
+      if (!detailsEl) return;
+      // Kolla nuvarande state via aria-expanded eller maxHeight
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        // Collapse
+        detailsEl.style.maxHeight = '0px';
+        btn.textContent = 'Visa mer';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        // Expand: sätt max-height till scrollHeight
+        const scrollH = detailsEl.scrollHeight;
+        detailsEl.style.maxHeight = scrollH + 'px';
+        btn.textContent = 'Visa mindre';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 }
+
 
 document.getElementById('currency-btn').addEventListener('click', function() {
   const filterUnder50 = document.getElementById('age-btn').dataset.filterActive === 'true';

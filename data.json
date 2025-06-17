@@ -19,8 +19,15 @@
     "region": "hela-sverige",
     "company": "Hennes & Mauritz",
     "image": "https://www.sses.se/wp-content/uploads/2017/09/stefan-persson2-scaled-e1693990395170.jpg",
-    "privholdings":"30000000000",
-    "privholdingsyopen":"27000000000"
+    "privholdings":"35000000000",
+    "privholdingsyopen":"30000000000",
+    "moreInfo": [
+  "Stefan Persson, född 4 oktober 1947, är en svensk miljardär och affärsman som är Hennes & Mauritz (H&M)-koncernens största ägare och tidigare styrelseordförande.",
+  "Utbildning: Högskoleexamen i ekonomi",
+  "Sektor: Mode och detaljhandel",
+  "Barn: Charlotte Söderström, Karl-Johan Persson"
+]
+
   },
   {
     "name": "Antonia Ax:son Johnson & familj",
@@ -34,7 +41,13 @@
      "_comment": "Novax mellan 5-10mdkr, Martin och servera 2.5-3.5mdkr, AX Johnson international: 16mdkr",
     "region": "stockholms",
     "company": "Axfood",
-    "image": "https://static.bonniernews.se/ba/e937bc59-1369-59db-ad3a-cd405913b0bf.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Antonia_Ax-son_Johnson_2006-09-30_001.jpg/960px-Antonia_Ax-son_Johnson_2006-09-30_001.jpg",
+        "moreInfo": [
+  "Antonia Axson Johnson är kanske Sveriges mäktigaste kvinna. Född 6 september 1943, är en svensk affärskvinna och fjärde generationens styrelseordförande för familjeföretaget Axel Johnson Group",
+  "Utbildning: Kandidatexamen i ekonomi och psykologi ",
+  "Sektor: Detaljhandel, fastigheter och industrisektorer",
+  "Barn: Caroline Berg, Alexandra Mörner, Sophie Mörner, Axel Mörner, Caroline Mörner"
+]
   },
   {
     "name": "Carl Bennet",
@@ -46,12 +59,20 @@
       { "ticker": "Elanders B", "shares": 17741091 },
       { "ticker": "Alleima", "shares": 2203500 }
     ],
-    "privholdings":"", 
+    "privholdings":"7080000000", 
+    "privholdingsyopen":"7080000000",
     "_comment": "5% i övriga aktieinnehav i Sandvik, holmen, ABB,investor osv 4,4mdkr per 2024 31 dec,  1% i ikbvida medel",
     "region": "hela-sverige",
     "company": "Lifco",
-    "image": "https://www.handelsklubben.se/wp-content/uploads/2022/12/CarlBennet-853x1024.jpg"
+    "image": "https://www.handelsklubben.se/wp-content/uploads/2022/12/CarlBennet-853x1024.jpg",
+            "moreInfo": [
+  "Carl Bennet är en svensk industriman och miljardär, född 19 augusti 1951 i Helsingborg, som via sitt investmentbolag Carl Bennet AB är huvudägare och styrelseordförande i Lifco AB, känt för långsiktiga investeringar inom bland annat dental-, rivnings- och systemlösningar. ",
+  "Utbildning: Kandidatexamen i ekonomi och psykologi ",
+  "Sektor: Industrisektorer",
+  "Barn: Anna Bennet"
+  ]
   },
+  
   {
     "name": "Fredrik Lundberg",
     "birthdate": "1951-08-05",
@@ -64,12 +85,18 @@
       { "ticker": "Hufvudstaden ", "shares": 2285417 },
       { "ticker": "LUND-B", "shares": 99926000}
     ],
-    "privholdings":"17000000000",
+    "privholdings":"19000000000",
     "privholdingsyopen":"19000000000", 
     "_comment": "0.8% i onoterat kan vara i cirka 1mdkr i sandvik eller något som jag inte ser på börsdata",
     "region": "hela-sverige",
     "company": "Lundbergsföretagen",
-    "image": "https://www.dagensps.se/_next/image/?url=https%3A%2F%2Fdagensps.fra1.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F02%2Ffredriklundberg.jpg&w=1200&q=75"
+    "image": "https://www.dagensps.se/_next/image/?url=https%3A%2F%2Fdagensps.fra1.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F02%2Ffredriklundberg.jpg&w=1200&q=75",
+                "moreInfo": [
+  "Fredrik Lundberg föddes den 5 augusti 1951 i Norrköping och är i dag verkställande direktör samt huvudägare i L E Lundbergföretagen, ett av Sveriges större investmentbolag som äger och förvaltar tunga tillgångar inom fastigheter, industrier och finans. ",
+ "Utbildning: Civilekonomexamen vid Handelshögskolan i Stockholm (1975) och dessutom en civilingenjörsutbildning i fastighetsekonomi från KTH.",
+  "Sektor: Industrisektorer, Finans, Fastigheter",
+  "Barn: Louise Lindh, Katarina Martinson"
+  ]
   },
   {
     "name": "Frederik Paulsen",
@@ -78,7 +105,13 @@
 "_comment": "59 346 710 000 kr är han värd eller 6.2md dollar enligt forbes 2025",
     "region": "hela-sverige",
     "company": "Ferring Pharmaceuticals",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Frederik_Paulsen_junior%2C_2011_%28cropped%29.jpg/1200px-Frederik_Paulsen_junior%2C_2011_%28cropped%29.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Frederik_Paulsen_junior%2C_2011_%28cropped%29.jpg/1200px-Frederik_Paulsen_junior%2C_2011_%28cropped%29.jpg",
+                    "moreInfo": [
+  "Frederik Paulsen är en svensk miljardär, entreprenör inom läkemedelsindustrin och ordförande emeritus för Ferring Pharmaceuticals, känd för sina globala expeditioner och sitt omfattande filantropiska engagemang.",
+  "Utbildning: Studier i kemi vid Christian-Albrechts-Universität i Kiel, affärsadministration vid Lunds universitet och en doktorsexamen i demografi från École des Hautes Études en Sciences Sociales i Paris. ",
+  "Sektor: Läkemedel",
+  "Barn: Fem barn"
+  ]
   },
   {
     "name": "Finn Rausing",
@@ -88,7 +121,13 @@
     "privholdings":"105292550000", 
     "privholdingsyopen":"103505490000",
     "_comment": "105 292 550 000kr är han värd eller 11md dollar enligt forbes 2025",
-    "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSeDpq4HnaAQnALbYfGGnVxalwmNPQ2dn2SX3lhCKnr0Hy1imnXi7vlT9Q0V8aY_Ot3tu1cS9eTJ9Y3uW313lEIww"
+    "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSeDpq4HnaAQnALbYfGGnVxalwmNPQ2dn2SX3lhCKnr0Hy1imnXi7vlT9Q0V8aY_Ot3tu1cS9eTJ9Y3uW313lEIww",
+                    "moreInfo": [
+  "Finn Rausing är en svensk affärsman och miljardär, känd som delägare i Tetra Laval-gruppen och medlem av familjen Rausing, en av Sveriges rikaste företagsfamiljer. ",
+  "Utbildning: Kandidatexamen vid Lunds universitet och genomförde en MBA ",
+  "Sektor: Industrisektorer",
+  "Barn: Tre barn"
+  ]
   },
   {
     "name": "Daniel Ek",
@@ -101,7 +140,13 @@
     ],
     "privholdings":"5766000000" ,
     "privholdingsyopen":"15355490000",
-    "_comment": "sålt aktier för 7md kr senaste åren kan ha en skvätt i annat också"
+    "_comment": "sålt aktier för 7md kr senaste åren kan ha en skvätt i annat också",
+                    "moreInfo": [
+  "Daniel Ek, grundaren av Spotify, är en svensk entreprenör som revolutionerat musikindustrin genom att göra musik tillgänglig för miljontals användare världen över.",
+ "Utbildning: Efter gymnasiet började Daniel Ek läsa teknisk ingenjörsvetenskap vid KTH – Kungliga Tekniska högskolan i Stockholm, men lade av efter bara cirka åtta veckor för att satsa fullt på sin karriär inom IT . ",
+  "Sektor: Teknik",
+  "Barn: Två barn"
+  ]
   },
   {
     "name": "Kirsten Rausing",
@@ -111,7 +156,11 @@
     "image": "https://jockeyklubben.se/wp-content/uploads/RP_ID00419627.jpg",
     "privholdings":"105292550000" ,
     "privholdingsyopen":"103505490000",
-    "_comment": "105 292 550 000kr är hon värd eller 11md dollar enligt forbes 2025"
+    "_comment": "105 292 550 000kr är hon värd eller 11md dollar enligt forbes 2025",
+                        "moreInfo": [
+  "Kirsten Rausing, född 6 juni 1952 i Lund, är en svensk affärskvinna och arvtagerska som äger en tredjedel av Tetra Laval och driver prisbelönt hästavel vid Lanwades Stud i Storbritannien. ",
+  "Sektor: Industrisektorer"
+  ]
   },
   {
     
@@ -122,7 +171,12 @@
     "image": "https://193countriesconsortium.com/wp-content/uploads/2024/12/4-3.jpg",
     "privholdings":"105292550000" ,
     "privholdingsyopen":"103505490000",
-    "_comment": "105 292 550 000kr är hon värd eller 11md dollar enligt forbes 2025"
+    "_comment": "105 292 550 000kr är hon värd eller 11md dollar enligt forbes 2025",
+                        "moreInfo": [
+  "Jörn Rausing är en framstående svensk affärsman och miljardär, känd för sin centrala roll inom Tetra Laval-koncernen och sina betydande investeringar i internationella företag. ",
+  "Sektor: Industrisektorer",
+  "Barn: Tre barn"
+  ]
   },
   {
     "name": "Eric Douglas",
@@ -134,7 +188,12 @@
       { "ticker": "Latour B", "shares": 237546782 }
     ],
     "privholdings":"" ,
-        "_comment": "1300000000 kr i boxholms skogar, Wasatornet vet inte vad det är värt, Pod Investment AB Ingen aning"
+        "_comment": "1300000000 kr i boxholms skogar, Wasatornet vet inte vad det är värt, Pod Investment AB Ingen aning",
+                            "moreInfo": [
+  "Eric Douglas är en svensk entreprenör och investerare, känd för sitt långsiktiga engagemang i Latour och betydande bidrag till svenska företag och innovationer. ",
+ "Utbildning: Kandidatexamen i ekonomi och konst.",
+  "Sektor: Industrisektorer"
+  ]
   },
   {
     "name": "Carl Douglas",
@@ -146,7 +205,12 @@
       { "ticker": "Latour B", "shares": 237546782 }
     ],
     "privholdings":"" ,
-    "_comment": "1300000000 kr i boxholms skogar, Wasatornet vet inte vad det är värt"
+    "_comment": "1300000000 kr i boxholms skogar, Wasatornet vet inte vad det är värt",
+                        "moreInfo": [
+  "Carl Douglas är en framstående svensk företagsledare och investerare, mest känd som huvudägare och drivande kraft bakom investmentbolaget Latour, med betydande inflytande över svensk industri. ",
+ "Utbildning: Kandidatexamen i naturvetenskap och konst ",
+  "Sektor: Industrisektorer"
+  ]
 
   },
   {
@@ -160,7 +224,11 @@
     ],
     "privholdings":"10649000000 ",
      "privholdingsyopen":"19355490000",
-    "_comment": "Han har säkert en skvätt i annat, sålde aktier 2025 för 6.3mdkr"
+    "_comment": "Han har säkert en skvätt i annat, sålde aktier 2025 för 6.3mdkr",
+                        "moreInfo": [
+  "Martin Lorentzon är en framstående svensk entreprenör och medgrundare av Spotify, känd för sitt betydande inflytande på den globala musikbranschen och sitt engagemang för innovation och entreprenörskap. Innan Spotify var Martin med och skapade Netstrategy tillsammans med Felix Hagnö som sedan utvecklades till Tradedoubler. Uppstarten av Spotify fick (2022) även en alldeles egen Netflix serie The Playlist. ",
+  "Sektor: Teknik"
+  ]
 
   },
   {
@@ -178,7 +246,13 @@
       { "ticker": "NIBE", "shares": 71636807 }
     ],
     "privholdings":"", 
-     "_comment": "Kan va en skvätt till"
+     "_comment": "Kan va en skvätt till",
+                     "moreInfo": [
+  "Sofia Schörling Högberg är en svensk miljardär och långvarig styrelseledamot (sedan 2005) i Securitas, Hexagon och ASSA ABLOY, vice ordförande i Melker Schörling AB och dotter till investeringsikonen Melker Schörling, med betydande inflytande över flera börsnoterade industriföretag. ",
+ "Utbildning: Masterexamen i företagsekonomi vid Handelshögskolan i Stockholm",
+  "Sektor: Industrisektorer",
+  "Barn: Fyra barn"
+  ]
   },
   {
     "name": "Märta Schörling",
@@ -195,7 +269,13 @@
       { "ticker": "NIBE", "shares": 71636807 }
     ],
     "privholdings":"", 
-     "_comment": "Kan va en skvätt till"
+     "_comment": "Kan va en skvätt till",
+                     "moreInfo": [
+  "Märta Schörling är en svensk miljardär och vice ordförande i investmentbolaget Melker Schörling AB, med styrelseposter i ledande industriföretag som Hexagon, AAK och Absolent, där hon driver aktivt ägande och strategisk tillväxt.",
+ "Utbildning: Masterexamen i företagsekonomi vid Handelshögskolan i Stockholm",
+  "Sektor: Industrisektorer",
+  "Barn: Två barn"
+  ]
   },
   {
     "name": "Torbjörn Törnqvist",
@@ -205,7 +285,12 @@
     "image": "https://www.adipec.com/media/ogngjuei/torbjorn.jpg",
      "privholdings":"51894000000", 
      "privholdingsyopen":"41355490000",
-     "_comment": "5.4md dollar enligt forbes, allt i privata bolag"
+     "_comment": "5.4md dollar enligt forbes, allt i privata bolag",
+                     "moreInfo": [
+  "Torbjörn Törnqvist är en framstående svensk affärsman och medgrundare av Gunvor Group, känd för sina strategiska satsningar inom global energi och råvaruhandel. ",
+ "Utbildning: Ekonomistudier vid Stockholms universitet",
+  "Sektor: Olja"
+  ]
   },
   {
     "name": "Erik Selin",
@@ -225,7 +310,11 @@
 
     ],
     "privholdings":"6000000000", 
-     "_comment": "Är säkert ett 20 tal bolag kvar men tot värde på <2mdkr, ska 6 miljarder+ kr utöver balder ()0.6mddollar"
+     "_comment": "Är säkert ett 20 tal bolag kvar men tot värde på <2mdkr, ska 6 miljarder+ kr utöver balder ()0.6mddollar",
+                     "moreInfo": [
+  "Erik Selin är en svensk miljardär och fastighetsentreprenör som sedan 2005 är vd och huvudägare av Fastighets AB Balder, och även ordförande i Collector Credit och SATO, känd för sin långsiktiga och strategiska investering i fastighetsmarknaden. ",
+  "Sektor: Finans, Fastigheter"
+  ]
   },
   {
     "name": "Roger Samuelsson",
@@ -235,7 +324,11 @@
     "image": "https://gfx.omni.se/images/0dc02dbf-6dd2-4378-a1b4-e58d84376fe2?h=708&tight=false&w=1372",
         "privholdings":"39355490000", 
         "privholdingsyopen":"39355490000", 
-     "_comment": "4.1 md dollar enligt forbes 2025, privat bolag "
+     "_comment": "4.1 md dollar enligt forbes 2025, privat bolag ",
+                     "moreInfo": [
+  "Roger Samuelsson, grundare av SHL Group, är en svensk entreprenör som byggt ett globalt ledande företag inom medicinteknik genom innovativa lösningar och starkt affärssinne. ",
+  "Sektor: Läkemedel"
+  ]
   },
   {
     "name": "Dan Sten Olsson",
@@ -245,7 +338,12 @@
     "image": "https://www.lloydslist.com/-/media/informa/maritime/legacy-images/2015/december/danstenolssonstena2.jpg?rev=e11ca3613b3448d496de1f50e92a5da6&w=790&hash=007DA0F4DF1D1FB6283FDDCED1A2E68F",
           "privholdings":"34000000000", 
           "privholdingsyopen":"31355490000",
-     "_comment": "3.4 md dollar enligt forbes 2025, privat bolag "
+     "_comment": "3.4 md dollar enligt forbes 2025, privat bolag ",
+                     "moreInfo": [
+  "FDan Sten Olsson, vd och huvudägare i Stena AB, har framgångsrikt lett det familjeägda företaget till att bli en global koncern inom sjöfart, energi och fastigheter.",
+ "Utbildning: Civilekonomexamen vid Göteborgs Universitet",
+  "Sektor: Sjöfart"
+  ]
   },
   {
     "name": "Lottie Tham & familj",
@@ -256,8 +354,13 @@
     "holdings": [
       { "ticker": "HMB", "shares": 58880400 }
     ],
-              "privholdings":"17759280000", 
-     "_comment": "2.6md dollar enligt forbes, är ju cirka 800 miljoner dollar i hm så resten lär vara privata investeringar."
+              "privholdings":"17259280000", 
+              "privholdingsyopen":"17759280000",
+     "_comment": "2.6md dollar enligt forbes, är ju cirka 800 miljoner dollar i hm så resten lär vara privata investeringar.",
+                     "moreInfo": [
+  "Helga Liselote Tham, född 18 april 1949 och dotter till H&M‑grundaren Erling Persson, är en svensk affärskvinna och arvtagerska som med sina över 5 % ägande i H&M spelar en betydande roll i bolagets fortsatta globala tillväxt ",
+ "Utbildning: Civilekonomexamen vid Handelshögskolan i Stockholm (1975) och dessutom en civilingenjörsutbildning i fastighetsekonomi från KTH."
+  ]
   },
   {
     "name": "Bertil Hult",
@@ -266,7 +369,12 @@
     "company": "Education First",
     "image": "https://cdn.unitycms.io/images/57xhTi6BarqBP5G5yw7-NA.jpg?op=ocroped&val=1200,800,1000,1000,0,0&sum=a5y7eH4wQRA",
               "privholdings":"26000000000", 
-     "_comment": "2.6 md dollar enligt forbes 2025, privat bolag "
+     "_comment": "2.6 md dollar enligt forbes 2025, privat bolag ",
+                          "moreInfo": [
+  "Bertil Hult, född 10 februari 1941, är en svensk entreprenör och dyslexiker som grundade Education First 1965 och revolutionerade språkstudier genom praktisk immersion, vilket även ledde till namninsamlingen av Hult International Business School i hans ära.",
+  "Sektor: Utbildning",
+  "Barn: Philip Hult, Edward Hult, Alex Hult"
+  ]
   },
   {
     "name": "Katarina Martinson",
@@ -278,7 +386,13 @@
       { "ticker": "LUND-B", "shares": 28677204}
     ],
               "privholdings":"7688000000", 
-     "_comment": "Katarina ev rikare ön Lousie men har investeringar i annat"
+              "privholdingsyopen":"7688000000",
+     "_comment": "Katarina ev rikare ön Lousie men har investeringar i annat",
+                     "moreInfo": [
+  "Katarina Martinson är en svensk miljardär och engagerad styrelseledamot i L E Lundbergföretagen och Husqvarna, som med sin ekonomibakgrund från SSE bidrar till att driva familjeföretagets långsiktiga framgångar. ",
+ "Utbildning: Civilekonom från Handelshögskolan i Stockholm",
+  "Sektor: Industrisektorer, Finans, Fastigheter"
+  ]
   },
   {
     "name": "Louise Lindh",
@@ -290,7 +404,13 @@
       { "ticker": "LUND-B", "shares": 32677204}
     ],
               "privholdings":"4805000000", 
-     "_comment": ""
+              "privholdingsyopen":"4805000000",
+     "_comment": "",
+                     "moreInfo": [
+  "Louise Lindh, född 1979, är en svensk miljardär och chef för Lundbergs fastighetsdivision. Hon leder framgångsrikt familjeföretagets fastighetsinvesteringar.",
+ "Utbildning: MBA från Handelshögskolan i Stockholm",
+  "Sektor: Industrisektorer, Finans, Fastigheter"
+  ]
   },
   {
     "name": "Conni Jonsson",
@@ -302,7 +422,13 @@
       { "ticker": "EQT", "shares": 47393468}
     ],
               "privholdings":"3844000000", 
-     "_comment": "Har säkert 10 miljarder till"
+              "privholdingsyopen":"3844000000",
+     "_comment": "Har säkert 10 miljarder till",
+                     "moreInfo": [
+  "Conni Jonsson, född 15 juli 1960, är en svensk finansman och medgrundare samt styrelseordförande för EQT Partners. ",
+ "Utbildning: Han avslutade en kandidatexamen (Bachelor of Science) i ekonomisk analys samt redovisning och finans vid Linköpings universitet 1984, och har även genomgått ett managementprogram vid Harvard Business School.",
+  "Sektor: Finans"
+  ]
   },
   {
     "name": "Stefan Olsson",
@@ -311,7 +437,12 @@
     "company": "Stena",
     "image": "https://imageio.forbes.com/specials-images/imageserve/0979fd4703a71dcf6d05021a5d278189/0x0.jpg?format=jpg&crop=744,744,x0,y95,safe&height=416&width=416&fit=bounds",
                  "privholdings":"22080726800", 
-     "_comment": "Haasdäasd"
+                 "privholdingsyopen":"21080726800", 
+     "_comment": "Haasdäasd",
+                     "moreInfo": [
+  "Stefan Olsson  är en svensk miljardär och delägare med 24,5 % i familjeföretaget Stena Sphere, där han kombinerar sin religiösa kallelse med aktivt ägande i internationell sjöfart och investeringar.",
+  "Sektor: Sjöfart"
+  ]
   },
   {
     "name": "Fredrik Österberg",
@@ -341,6 +472,11 @@
       { "ticker": "Sagax D", "shares": 900000}
     ],
               "privholdings":"", 
-     "_comment": ""
+     "_comment": "",
+                     "moreInfo": [
+  "David Mindus, född 26 januari 1972, är en svensk miljardär, grundare och VD för fastighetsbolaget Sagax AB",
+ "Utbildning: Med en civilekonomexamen (MBA/MSc i Business & Economics) från Stockholms universitet som akademisk grund för att bygga ett omfattande fastighetsimperium.",
+  "Sektor: Fastigheter"
+  ]
   }
 ]

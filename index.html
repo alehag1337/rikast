@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rikaste Personerna I Sverige | Uppdaterad Lista</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
   <style>
     /* Grundläggande reset */
     * {
@@ -434,6 +436,153 @@
     }
 
 
+
+/* Exempel på grundläggande typografivariabler (kan ligga globalt) */
+:root {
+  --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: 'Georgia', serif;
+  --color-text: #222;
+  --color-meta: #555;
+  --color-link: #007acc;
+  --color-link-hover: #005fa3;
+  --color-border: #ddd;
+  --line-height: 1.6;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+}
+
+/* Wrapper för featured-article */
+.featured-article {
+  max-width: 800px;       /* anpassa efter layout */
+  margin: 0 auto;         /* centrera horisontellt */
+  padding: var(--spacing-large) var(--spacing-medium);
+  font-family: var(--font-family-serif);
+  color: var(--color-text);
+  border-top: 1px solid var(--color-border); /* t.ex. skiljelinje mot övrigt innehåll */
+}
+
+/* Meta-kategori: ofta liten text, versaler */
+.article-meta {
+  font-family: var(--font-family-sans);
+  font-size: 0.875rem;  /* 14px om root är 16px */
+  color: var(--color-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-small);
+  display: flex;
+  align-items: center;
+  color: #949494;
+}
+
+/* Separator t.ex. '|' med marginal */
+.meta-separator {
+  margin: 0 var(--spacing-small);
+}
+
+/* Rubrik */
+.article-title {
+  font-size: 1.75rem;  /* cirka 28px */
+  line-height: 1.2;
+  margin: 0 0 var(--spacing-medium) 0;
+  font-family: var(--font-family-serif);
+   color: #ffffff;
+}
+
+/* Bildsektionen */
+.article-figure {
+  margin: 0;  /* kan anpassas */
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  
+}
+.article-figure {
+  margin: 0;  /* kan anpassas */
+  margin-bottom: var(--spacing-medium);
+  position: relative;
+  
+}
+
+/* Gör bilden responsiv */
+.article-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px; /* t.ex. lätt rundade hörn */
+}
+
+/* Bildtext */
+.article-caption {
+  font-family: var(--font-family-sans);
+  font-size: 0.75rem;
+  color: var(--color-meta);
+  margin-top: var(--spacing-small);
+  font-style: italic;
+  color: #949494;
+}
+
+/* Excerpt */
+.article-excerpt {
+  font-size: 1rem;
+  line-height: var(--line-height);
+  margin-bottom: var(--spacing-medium);
+  color: #ffffff;
+}
+
+/* Läs mer-länk */
+.article-readmore {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article-readmore:hover,
+.article-readmore:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Responsiv anpassning om du t.ex. vill ha bredare marginaler på större skärm */
+@media (min-width: 1024px) {
+  .featured-article {
+    padding: var(--spacing-large) var(--spacing-large);
+  }
+}
+
+
+.card .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  /* valfritt visuellt: bakgrund/färg/padding */
+  background-color: #f9f9f9;
+  margin-top: 8px;
+  border-radius: 4px;
+  padding: 0 10px; /* horisontell padding; vertikalt utrymme ingår i scrollHeight */
+}
+
+.card .details p {
+  margin: 10px 0;
+}
+.toggle-details-btn {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background-color: #ffffff;
+  color: #0c0c0c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.toggle-details-btn:hover {
+  background-color: #c5c5c5;
+}
+
+/* Exempel på CSS */
+
+
   </style>
 </head>
 <body>
@@ -452,13 +601,15 @@
   
   <nav>
     <div class="nav-header">
-      <h2>Sveriges Rikaste Personer</h2>
-      <p>Vem är rikast i Sverige 2025? Vi uppdaterar listan på sveriges rikaste personer VARJE DAG! Nästan alla har majoriteten av sitt kapital i aktier. Upptäck Sveriges rikaste man och kvinna – en komplett genomgång av deras förmögenhet och de företag som skapat deras imponerande förmögenhetsvärden. Läs vem som toppar listan och vilka aktörer som ligger bakom deras framgångar på börsen.</p>
+      <h2>JUST NU | Sveriges Rikaste Personer 2025</h2>
+      <p>Vem är rikast i Sverige 2025? Vi uppdaterar listan på sveriges rikaste personer VARJE DAG! Nästan alla har majoriteten av sitt kapital i aktier. Upptäck Sveriges rikaste man och kvinna – en komplett genomgång av deras förmögenhet och de företag som skapat deras imponerande förmögenhetsvärden. Läs vem som toppar listan och vilka aktörer som ligger bakom deras framgångar på börsen. </p>
       <ul>
-        <li>Live-Listan över de rikaste svenskarna!</li>
+        <li>Sveriges rikaste personer 2025 – Live-uppdaterad lista</li>
         <li>Yngsta miljardärerna i Sverige!</li>
-        <li>Vi rankar Sveriges rikaste personer 2025!</li>
+        <li>Utforska deras bakgrund, ålder, familj och utbildning!</li>
       </ul>
+
+
       <p>Vad är en miljard? En miljard är faktiskt 1000 miljoner, så 1 miljard kronor är 1000 miljoner kronor.</p>
       <div class="small-heading">Uppdateras dagligen!</div>
     </div>
@@ -528,6 +679,7 @@
     });
   </script>
 
-  
+
+
 </body>
 </html>
