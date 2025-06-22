@@ -10,7 +10,7 @@
 
   <!-- Ny samlingssida för artiklar -->
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/artiklar.html</loc>
+    <loc>https://www.rikastisverige.se/artiklar.html</loc>
     <!-- Använd det datum då du publicerade/uppdaterade denna sida -->
     <lastmod>2025-06-20</lastmod>
     <!-- Eftersom innehållet kan uppdateras när du lägger till fler artiklar -->
@@ -21,7 +21,7 @@
 
   <!-- Artikel 1 -->
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/humanoids.html</loc>
+    <loc>https://www.rikastisverige.se/humanoids.html</loc>
     <lastmod>2025-06-21</lastmod>
     <!-- Om artikeln vanligtvis inte kommer uppdateras ofta efter publicering -->
     <changefreq>monthly</changefreq>
@@ -29,25 +29,25 @@
   </url>
   <!-- Upprepa för artikel2–artikel5 -->
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/hurrikarsebastian.html</loc>
+    <loc>https://www.rikastisverige.se/hurrikarsebastian.html</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/investeraispacex.html</loc>
+    <loc>https://www.rikastisverige.se/investeraispacex.html</loc>
     <lastmod>2025-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/vadarxai.html</loc>
+    <loc>https://www.rikastisverige.se/vadarxai.html</loc>
     <lastmod>2025-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.rikastisverige.se/artiklar/waymotillsverige.html</loc>
+    <loc>https://www.rikastisverige.se/waymotillsverige.html</loc>
     <lastmod>2025-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
