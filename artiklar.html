@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artiklar | Sveriges Rikaste Personer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Reset & grund */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Lato',sans-serif;
+      background:#030712;
+      color:#131313;
+    }
+    /* Notisbanner */
+    .notification-banner {
+      background:#007BFF; color:#fff;
+      text-align:center; padding:8px;
+      font-size:0.9rem;
+    }
+    /* Header / logga */
+    header {
+      text-align:center; padding:20px 0;
+    }
+    .logo {
+      width:150px; height:auto;
+    }
+    /* Hero-banner */
+    .hero {
+      position: relative;
+      width:100%;
+      height:450px;              /* ändra höjd vid behov */
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:60px;
+    }
+    .hero-overlay {
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      color: #fff;
+      max-width:600px;
+      text-align:center;
+      z-index:1;
+      padding: 0 20px;
+    }
+    .hero-content h2 {
+      font-size:2.5rem;
+      margin-bottom:15px;
+      line-height:1.2;
+    }
+    .hero-content p {
+      font-size:1rem;
+      margin-bottom:25px;
+      line-height:1.5;
+    }
+    .hero-content .btn {
+      display:inline-block;
+      padding:12px 30px;
+      background:#007BFF;
+      color:#fff;
+      text-decoration:none;
+      font-size:1rem;
+      border-radius:4px;
+      transition: background 0.2s;
+    }
+    .hero-content .btn:hover {
+      background:#0056b3;
+    }
+
+    /* === Ny featured-artikelsektion === */
+    .featured-articles {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+    .featured-main img {
+      width: 100%; height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .featured-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .featured-text p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #ddd;
+    }
+    .featured-text .author {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .featured-list ul {
+      list-style: none;
+    }
+/* Behåll bara marginalen på <li> */
+.featured-list li {
+  margin-bottom: 20px;
+}
+
+/* Gör <a> till flex-container så bild + text ligger sida vid sida */
+.featured-list li > a {
+  display: flex;
+  align-items: center;
+}
+
+/* Se till att bilden inte får bottenmarginal och ligger till vänster */
+.featured-list li > a img {
+  margin-right: 12px;
+  margin-bottom: 0;
+}
+    .featured-list img {
+      width: 60px; height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 12px;
+    }
+    .featured-list .info h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+    .featured-list .info .author {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .featured-list .more {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    @media (max-width: 768px) {
+      .featured-articles {
+        display: block;
+      }
+      .featured-main,
+      .featured-list {
+        margin-bottom: 40px;
+      }
+    }
+    /* Footer */
+.site-footer {
+  background: #030712;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 40px 20px 20px;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer-logo-social {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.social-icons a {
+  margin: 0 8px;
+  display: inline-block;
+}
+.footer-cols {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.footer-col p {
+  line-height: 1.4;
+}
+.footer-copy {
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.featured-main a {
+  color: #fff;
+ text-decoration: none;
+}
+.featured-articles a {
+  color: #fff;
+ text-decoration: none;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Notisbanner -->
+  <div class="notification-banner">
+    🚀 Sidan uppdateras varje dag
+  </div>
+
+  <!-- Header med logga -->
+  <header>
+    <a href="index.html"><img src="logovit.png" alt="Logotyp" class="logo"></a>
+  </header>
+
+  <!-- Hero-banner med senaste artikeln -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Vi har listan | Sveriges Rikaste 2025</h2>
+      <p>Vi samlar data för att estimera sveriges rikaste personer.</p>
+      <a href="index.html" class="btn">Till topplistan</a>
+    </div>
+  </section>
+
+  <!-- Ny featured-artikelsektion -->
+  <section id="featured-section" class="featured-articles">
+    <!-- Vänster kolumn: Huvudartikel -->
+     
+    <div class="featured-main">
+      
+     <a href="vadarxai.html"><img src="xai.webp" alt="Parisa Liljestrand på tomma teaterstolar"></a>
+      <div class="featured-text">
+        <h3><a href="vadarxai.html">Vad är xAI? - Elon Musk:s egna AI bolag</a></h3>
+        <p>Elon Musk:s oro inför framtiden</p>
+        <span class="author">Alexander Eriksson</span>
+      </div>
+    </div>
+
+    <!-- Höger kolumn: Lista med mindre artiklar -->
+    <div class="featured-list">
+      <ul>
+        <li>
+          <a href="investeraispacex.html">
+            <img src="space.jfif" alt="Påve och ryktesspridning">
+            <div class="info">
+              <h4>Går det att investera i SpaceX? Här är dina alternativ</h4>
+              <span class="author">Alexander Eriksson</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="hurrikarsebastian.html">
+            <img src="sebastian-siemiatkowski.webp" alt="Stina Oscars ons stoppade pjäser">
+            <div class="info">
+              <h4>Hur rik är Sebastian Siemiatkowski?</h4>
+              <span class="author">Alexander Eriksson</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="humanoids.html">
+            <img src="aeon.jpg" alt="Påven och pedofilerna">
+            <div class="info">
+              <h4>Hexagon lanserar ny humaniod robot</h4>
+              <span class="author">Alexander Eriksson</span>
+            </div>
+          </a>
+        </li>
+          <li>
+          <a href="waymotillsverige.html">
+            <img src="waymo.jpg" alt="Påven och pedofilerna">
+            <div class="info">
+              <h4>Kommer Waymo till Sverige? - Google:s egna självkörande bil</h4>
+              <span class="author">Alexander Eriksson</span>
+            </div>
+          </a>
+        </li>
+  
+      </ul>
+      <a href="#" class="more">Se fler artiklar från Rikast. →</a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo-social">
+        <img src="logovit.png" alt="Kvartal-logga" class="footer-logo">
+        <div class="social-icons">
+
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>OM RIKAST</h4>
+          <p>Rikast i Sverige är ett politiskt oberoende mediehus som publicerar texter, estimat och statistik med ekonomijournalistisk inriktning.<br>
+      
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; Rikast i Sverige 2025 | <a href="#">Cookie­inställningar</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+

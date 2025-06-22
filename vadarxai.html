@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artiklar | Sveriges Rikaste Personer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Reset & grund */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Lato',sans-serif;
+      background:#030712;
+      color:#fff;
+    }
+    /* Notisbanner */
+    .notification-banner {
+      background:#007BFF; color:#fff;
+      text-align:center; padding:8px;
+      font-size:0.9rem;
+    }
+    /* Header / logga */
+    header {
+      text-align:center; padding:20px 0;
+    }
+    .logo {
+      width:150px; height:auto;
+    }
+    /* Hero-banner */
+    .hero {
+      position: relative;
+      width:100%;
+      height:450px;              /* ändra höjd vid behov */
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:60px;
+    }
+    .hero-overlay {
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      color: #fff;
+      max-width:600px;
+      text-align:center;
+      z-index:1;
+      padding: 0 20px;
+    }
+    .hero-content h2 {
+      font-size:2.5rem;
+      margin-bottom:15px;
+      line-height:1.2;
+    }
+    .hero-content p {
+      font-size:1rem;
+      margin-bottom:25px;
+      line-height:1.5;
+    }
+    .hero-content .btn {
+      display:inline-block;
+      padding:12px 30px;
+      background:#007BFF;
+      color:#fff;
+      text-decoration:none;
+      font-size:1rem;
+      border-radius:4px;
+      transition: background 0.2s;
+    }
+    .hero-content .btn:hover {
+      background:#0056b3;
+    }
+
+    /* === Ny featured-artikelsektion === */
+    .featured-articles {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+    .featured-main img {
+      width: 100%; height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .featured-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .featured-text p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #ddd;
+    }
+    .featured-text .author {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .featured-list ul {
+      list-style: none;
+    }
+    .featured-list li {
+      margin-bottom: 20px;
+    }
+    .featured-list li > a {
+      display: flex;
+      align-items: center;
+    }
+    .featured-list li > a img {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+    .featured-list img {
+      width: 60px; height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 12px;
+    }
+    .featured-list .info h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+    .featured-list .info .author {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .featured-list .more {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    @media (max-width: 768px) {
+      .featured-articles {
+        display: block;
+      }
+      .featured-main,
+      .featured-list {
+        margin-bottom: 40px;
+      }
+    }
+    /* Footer */
+    .site-footer {
+      background: #030712;
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 40px 20px 20px;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .footer-logo-social {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .footer-logo {
+      width: 60px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .social-icons a {
+      margin: 0 8px;
+      display: inline-block;
+    }
+    .footer-cols {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .footer-col {
+      flex: 1;
+      min-width: 200px;
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .footer-col p {
+      line-height: 1.4;
+    }
+    .footer-copy {
+      text-align: center;
+      border-top: 1px solid #222;
+      padding-top: 15px;
+    }
+    .site-footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* === Artikel-sektion === */
+    .article-section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      /* Ingen bakgrund så den är transparent mot mörk bakgrund */
+      background: none;
+      color: #fff;
+    }
+    .article-meta-category {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin: 20px 0 5px;
+    }
+    .article-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .article-image {
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+    .image-credit {
+      font-size: 0.8rem;
+      color: #777;
+      margin: 5px 0 20px;
+    }
+    .article-intro p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+    .article-byline {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 5px;
+    }
+    .article-meta-extra {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+    .article-meta-extra span {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Notisbanner -->
+  <div class="notification-banner">
+    🚀 Sidan uppdateras varje dag
+  </div>
+
+  <!-- Header med logga -->
+  <header>
+    <a href="index.html"><img src="logovit.png" alt="Logotyp" class="logo"></a>
+  </header>
+
+  <!-- === Artikel-sektion === -->
+  <section class="article-section">
+    <div class="article-meta-category">EKONOMI | AI</div>
+    <h2>Vad är xAI? - Elon Musk:s egna AI bolag</h2>
+    <div class="article-image">
+      <img src="xai.webp" alt="Illustration våld i äldrevården">
+    </div>
+    <div class="image-credit">Illustration: Rikast</div>
+    <div class="article-intro">
+        <p>AI-branschen exploderar – och Elon Musk vill vara med och forma framtiden. Därför grundade han xAI, ett AI-företag med ambitioner som går långt bortom dagens chattbotar och bildgeneratorer. Men vad är egentligen xAI, vad gör de – och varför är Musk orolig för utvecklingen av superintelligent AI?</p>
+
+              <h3>Vad gör xAI?</h3>
+      <p>
+  Det mest kända projektet från xAI hittills är Grok – en chatbot som är integrerad med Musks plattform X (tidigare Twitter). Grok är tänkt att konkurrera med chattbotar som ChatGPT, men med en något mer "rebellisk" personlighet och direkt tillgång till realtidsinformation från X.
+      </p>
+              <h3>Vad är målet med xAI?</h3>
+      <p>
+   Till skillnad från många andra AI-företag har xAI ett uttalat filosofiskt och existentiellt syfte: att skapa en artificiell intelligens som hjälper mänskligheten att förstå universum.
+
+Musk har sagt att AI inte bara ska vara smart – den ska vara ärlig, förklarande och förståelig. Det innebär att xAI strävar efter att bygga AI-modeller som inte är “black boxes”, utan som människor faktiskt kan förstå och kontrollera.
+
+xAI samarbetar dessutom med Musks andra bolag, särskilt Tesla och X (tidigare Twitter), vilket gör det möjligt att koppla ihop AI med självkörande bilar, robotar och informationshantering i realtid.
+      </p>
+                    <h3>Elon Musks oro om superintelligent AI</h3>
+      <p>
+   Elon Musk har länge varit en av de mest högljudda rösterna när det gäller riskerna med AI. Redan 2015 varnade han för att superintelligent AI kan bli ett “existentiellt hot mot mänskligheten” om den inte utvecklas med rätt säkerhetsåtgärder.
+
+Han var en av medgrundarna till OpenAI, men har sedan dess kritiserat företaget för att ha blivit för kommersiellt och för intransparent. Med xAI vill han därför skapa ett alternativ där säkerhet, etik och öppenhet är i fokus – samtidigt som man utvecklar kraftfull teknik.
+
+Musk förespråkar även reglering av AI på global nivå, för att undvika att tekniken används på ett sätt som kan skada mänskligheten – till exempel inom autonoma vapen, manipulation av information eller okontrollerad AI-utveckling.
+      </p>
+    </div>
+    <div class="article-byline">
+      AV ALEXANDER ERIKSSON | 20 JUNI 2025
+    </div>
+    <div class="article-meta-extra">
+      <span>Nyhetsbrev</span> • <span>Lästid 6 min</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo-social">
+        <img src="logovit.png" alt="Kvartal-logga" class="footer-logo">
+        <div class="social-icons">
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>OM RIKAST</h4>
+          <p>Rikast i Sverige är ett politiskt oberoende mediehus som publicerar texter, estimat och statistik med ekonomijournalistisk inriktning.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; Rikast i Sverige 2025 | <a href="#">Cookie­inställningar</a>
+    </div>
+  </footer>
+
+</body>
+</html>
